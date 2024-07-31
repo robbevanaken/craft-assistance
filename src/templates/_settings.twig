@@ -1,0 +1,44 @@
+{# @var plugin \antenna\craftassistance\Plugin #}
+{# @var settings \antenna\craftassistance\models\Settings #}
+
+{% import '_includes/forms.twig' as forms %}
+
+{{ forms.colorField({
+    first: true,
+    label: 'Color',
+    name: 'primaryColor',
+    value: settings.primaryColor,
+    required: true
+}) }}
+
+{{ forms.colorField({
+    first: true,
+    label: 'Icon color',
+    name: 'secondaryColor',
+    value: settings.secondaryColor,
+    required: true
+}) }}
+
+{{ forms.textField({
+    first: true,
+    label: 'Title',
+    name: 'assistanceTitle',
+    value: settings.assistanceTitle,
+    required: true
+}) }}
+
+{{ forms.textareaField({
+    first: true,
+    label: 'Text',
+    name: 'assistanceText',
+    value: settings.assistanceText,
+    required: true
+}) }}
+
+{{ forms.textField({
+    first: true,
+    label: 'E-mail address',
+    name: 'assistanceEmail',
+    value: settings.assistanceEmail,
+    required: true
+}) }}

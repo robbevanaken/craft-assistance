@@ -1,0 +1,43 @@
+{
+    "name": "antenna/craft-assistance",
+    "description": "This plugin shows a popup in the backend where the user can go for help and contacting info of your agency.",
+    "type": "craft-plugin",
+    "license": "proprietary",
+    "support": {
+        "email": "web@weareantenna.be"
+    },
+    "require": {
+        "php": ">=8.2",
+        "craftcms/cms": "^3.1.0"
+    },
+    "require-dev": {
+        "craftcms/ecs": "dev-main",
+        "craftcms/phpstan": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "antenna\\craftassistance\\": "src/"
+        }
+    },
+    "extra": {
+        "handle": "assistance",
+        "name": "Assistance ",
+        "developer": "Antenna",
+        "documentationUrl": ""
+    },
+    "scripts": {
+        "check-cs": "ecs check --ansi",
+        "fix-cs": "ecs check --ansi --fix",
+        "phpstan": "phpstan --memory-limit=1G"
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "8.2"
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    }
+}
