@@ -4,7 +4,7 @@ This plugin shows a popup in the backend where the user can go for help and cont
 
 ## Requirements
 
-This plugin requires Craft CMS 3.1.0 or later, and PHP 8.2 or later.
+This plugin requires Craft CMS 5.2.0 or later, and PHP 8.2 or later.
 
 ## Installation
 

@@ -8,7 +8,7 @@
     },
     "require": {
         "php": ">=8.2",
-        "craftcms/cms": "^3.1.0"
+        "craftcms/cms": "^5.2.0"
     },
     "require-dev": {
         "craftcms/ecs": "dev-main",
@@ -23,6 +23,7 @@
         "handle": "assistance",
         "name": "Assistance ",
         "developer": "Antenna",
+        "developerUrl": "https://weareantenna.be/",
         "documentationUrl": ""
     },
     "scripts": {
