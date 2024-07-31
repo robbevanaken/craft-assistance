@@ -7,6 +7,7 @@ use antenna\craftassistance\models\Settings;
 use craft\base\Model;
 use craft\base\Plugin as BasePlugin;
 use craft\web\View;
+use craft\elements\Asset;
 
 /**
  * Assistance plugin
@@ -42,7 +43,20 @@ class Plugin extends BasePlugin
 
                 // Fetch settings and pass to JS
                 $settings = $this->getSettings();
+                $agencyLogoUrl = null;
+                $agencyLogoTitle = null;
+
+                if ($settings->agencyLogo) {
+                    // Fetch the asset based on its ID and get the URL
+                    $asset = Asset::find()->id($settings->agencyLogo)->one();
+                    if ($asset) {
+                        $agencyLogoUrl = $asset->getUrl();
+                        $agencyLogoTitle = $asset->title;
+                    }
+                }
                 $config = [
+                    'agencyLogoUrl' => $agencyLogoUrl,
+                    'agencyLogoTitle' => $agencyLogoTitle,
                     'primaryColor' => $settings->primaryColor,
                     'secondaryColor' => $settings->secondaryColor,
                     'assistanceTitle' => $settings->assistanceTitle,

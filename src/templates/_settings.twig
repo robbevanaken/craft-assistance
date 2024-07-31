@@ -3,6 +3,17 @@
 
 {% import '_includes/forms.twig' as forms %}
 
+{# Logo field #}
+{{ forms.elementSelectField({
+    label: 'Logo',
+    name: 'agencyLogo',
+    id: 'agencyLogo',
+    elements: settings.agencyLogo|length ? craft.assets.id(settings.agencyLogo).all() : null,
+    limit: 1,
+    elementType: 'craft\\elements\\Asset',
+}) }}
+
+{# Color field #}
 {{ forms.colorField({
     first: true,
     label: 'Color',
@@ -11,6 +22,7 @@
     required: true
 }) }}
 
+{# Icon color field #}
 {{ forms.colorField({
     first: true,
     label: 'Icon color',
@@ -19,6 +31,7 @@
     required: true
 }) }}
 
+{# Title field #}
 {{ forms.textField({
     first: true,
     label: 'Title',
@@ -27,6 +40,7 @@
     required: true
 }) }}
 
+{# Text field #}
 {{ forms.textareaField({
     first: true,
     label: 'Text',
@@ -35,6 +49,7 @@
     required: true
 }) }}
 
+{# E-mail field #}
 {{ forms.textField({
     first: true,
     label: 'E-mail address',

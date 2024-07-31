@@ -89,3 +89,13 @@
 #antenna-assistance-content a {
     color: var(--primaryColor, #5541f0);
 }
+
+.antenna-assistance-image {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.antenna-assistance-image img {
+    max-height: 100%;
+    max-width: 6.25rem;
+}
